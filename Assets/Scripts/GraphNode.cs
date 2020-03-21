@@ -6,32 +6,32 @@ using UnityEngine.UI;
 public class GraphNode : MonoBehaviour
 {
 
-	const int factor = 12;
+    const int factor = 12;
 
-	public Text date;
-	public Text graphScore;
+    public Text date;
+    public Text graphScore;
 
-	public	RectTransform rect;
+    public RectTransform rect;
 
 
-	public void UpdateNode (int value, string data)
-	{
-		rect.sizeDelta = new Vector2 (40, value * factor);
-		date.text = data;
-		graphScore.color = new Color(0.1568f, 0.6274f, 0.999f, 0.0f);
-		string nodeVale = value.ToString () + " oz";
-		graphScore.text = nodeVale;
-	}
+    public void UpdateNode(int value, string data)
+    {
+        rect.sizeDelta = new Vector2(40, value * factor);
+        date.text = data;
+        graphScore.color = Color.black;
+        string nodeVale = value.ToString();
+        graphScore.text = nodeVale;
+    }
 
-	public void NodeClick()
-	{
-		graphScore.color = new Color(0.1568f, 0.6274f, 0.999f, 1.0f);
-		StartCoroutine ("FadeOff");
-	}
+    public void NodeClick()
+    {
+        graphScore.color = Color.black;
+        StartCoroutine("FadeOff");
+    }
 
-	IEnumerator FadeOff()
-	{
-		yield return new WaitForSeconds (2);
-		graphScore.color = new Color(0.1568f, 0.6274f, 0.999f, 0.0f);
-	}
+    IEnumerator FadeOff()
+    {
+        yield return new WaitForSeconds(4);
+        graphScore.color = Color.black;
+    }
 }

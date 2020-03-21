@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{EA08B961-1084-B6B0-4D26-32D4286721B4}|">
+  <MonoDevelop.Ide.ItemProperties.QuitCoach PreferredExecutionTarget="ca95fdfa-95aa-41e7-b2b4-64b6b1c20a4a" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GraphNode.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Screens/HomeScreen.cs" Line="250" Column="111" />
+      <File FileName="Assets/Scripts/GraphNode.cs" Line="23" Column="36" />
+      <File FileName="Assets/Scripts/Screens/SettingScreen.cs" Line="29" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="QuitCoach" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Manager" expanded="True" />
+                <Node name="Screens" expanded="True" />
+                <Node name="GraphNode.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
