@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 using UnityEngine.Networking;
 
@@ -17,10 +18,27 @@ public class AppManager : MonoBehaviour
     public DateTime lastSeen;
     [SerializeField]
     public DateTime lastUpdated;
+    public DateTime lastFeedback;
+    public int latestFeedbackScore;
 
     public UserData userdata;
 
     public GameObject loading;
+
+    public int[] positiveQues;
+    public int[] negativeQues;
+
+    public List<Image> posImg1;
+    public List<Image> posImg2;
+    public List<Image> posImg3;
+    public List<Image> posImg4;
+    public List<Image> posImg5;
+
+    public List<Image> negImg1;
+    public List<Image> negImg2;
+    public List<Image> negImg3;
+    public List<Image> negImg4;
+    public List<Image> negImg5;
 
     public void SetUserData(string phone, string name, string mail, string pwd)
     {
@@ -59,6 +77,8 @@ public class AppManager : MonoBehaviour
         data.isLoggedIn = true;
         data.lastSeen = lastSeen.ToString();
         data.lastUpdated = lastUpdated.ToString();
+        data.latestFeedbackScore = latestFeedbackScore;
+        data.lastFeedback = lastFeedback.ToString();
         Debug.Log("set players pref " + JsonUtility.ToJson(data).ToString());
         PlayerPrefs.SetString("SoberAI", JsonUtility.ToJson(data).ToString());
     }
@@ -114,6 +134,130 @@ public class AppManager : MonoBehaviour
         }
     }
 
+    public void ToggleButton(BTType type, int quesno)
+    {
+        switch (type)
+        {
+            case BTType.pos:
+                {
+                    switch (quesno)
+                    {
+                        case 1:
+                            {
+                                for (int i = 0; i < posImg1.Count; i++)
+                                {
+                                    WhiteButton(posImg1[i]);
+                                }
+                            }
+                            break;
+                        case 2:
+                            {
+                                foreach (Image i in posImg2)
+                                {
+                                    WhiteButton(i);
+                                }
+                            }
+                            break;
+                        case 3:
+                            {
+                                foreach (Image i in posImg3)
+                                {
+                                    WhiteButton(i);
+                                }
+                            }
+                            break;
+                        case 4:
+                            {
+                                foreach (Image i in posImg4)
+                                {
+                                    WhiteButton(i);
+                                }
+                            }
+                            break;
+                        case 5:
+                            {
+                                foreach (Image i in posImg5)
+                                {
+                                    WhiteButton(i);
+                                }
+                            }
+                            break;
+                    }
+                }
+                break;
+            case BTType.neg:
+                {
+                    switch (quesno)
+                    {
+                        case 1:
+                            {
+                                foreach (Image i in negImg1)
+                                {
+                                    WhiteButton(i);
+                                }
+                            }
+                            break;
+                        case 2:
+                            {
+                                foreach (Image i in negImg2)
+                                {
+                                    WhiteButton(i);
+                                }
+                            }
+                            break;
+                        case 3:
+                            {
+                                foreach (Image i in negImg3)
+                                {
+                                    WhiteButton(i);
+                                }
+                            }
+                            break;
+                        case 4:
+                            {
+                                foreach (Image i in negImg4)
+                                {
+                                    WhiteButton(i);
+                                }
+                            }
+                            break;
+                        case 5:
+                            {
+                                foreach (Image i in negImg5)
+                                {
+                                    WhiteButton(i);
+                                }
+                            }
+                            break;
+                    }
+                }
+                break;
+        }
+    }
+
+    public void ColorButton(Image img)
+    {
+        img.color = new Color(1, (float)(204 / 255), (float)(153 / 255));
+    }
+
+    public void WhiteButton(Image img)
+    {
+        img.color = new Color(1, 1, 1);
+    }
+
+    public void CalculateLatestFeedbackScore()
+    {
+        int sum1 = 0, sum2 = 0;
+        for (int i = 0; i < 5; i++)
+        {
+            sum1 += positiveQues[i];
+            sum2 += negativeQues[i];
+        }
+        latestFeedbackScore = sum1 - sum2 + 50;
+        lastFeedback = DateTime.Today;
+        SetPlayerPrefs();
+    }
+
 }
 
 [Serializable]
@@ -126,6 +270,8 @@ public class UserData
     public bool isLoggedIn;
     public string lastSeen;
     public string lastUpdated;
+    public string lastFeedback;
+    public int latestFeedbackScore;
 }
 
 public class GetUserApi

@@ -27,6 +27,10 @@ public class HomeScreen : PanelBase
     public InputField inputFieldMalt;
     public InputField inputFieldHard;
 
+    public GameObject PosObject;
+    public GameObject NegObject;
+    public GameObject EmotionTracker;
+
 
     void Awake()
     {
@@ -429,6 +433,45 @@ public class HomeScreen : PanelBase
         yield return new WaitForSeconds(5);
         ActivatePopup1(notify);
         notify = "";
+    }
+
+    public void ActivateObject(int Type)
+    {
+        switch ((BTType)Type)
+        {
+            case BTType.neg:
+                {
+                    NegObject.SetActive(true);
+                    PosObject.SetActive(false);
+                }
+                break;
+            case BTType.pos:
+                {
+                    PosObject.SetActive(true);
+                    NegObject.SetActive(false);
+                }
+                break;
+            case BTType.none:
+                {
+                    PosObject.SetActive(false);
+                    NegObject.SetActive(false);
+                }
+                break;
+            case BTType.emotionOpen:
+                {
+                    EmotionTracker.SetActive(true);
+                    DeactivatePopup1();
+                }
+                break;
+            case BTType.emotionClose:
+                {
+                    AppManager.Instance.CalculateLatestFeedbackScore();
+                    EmotionTracker.SetActive(false);
+                    DeactivatePopup1();
+                }
+                break;
+
+        }
     }
 
     public DoseDataCallBack calldose;

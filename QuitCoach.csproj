@@ -273,6 +273,7 @@
     <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\GraphRequest.cs" />
     <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\MainMenu.cs" />
     <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\Pay.cs" />
+    <Compile Include="Assets\FeedBackScreen.cs" />
     <Compile Include="Assets\PredictorScreen.cs" />
     <Compile Include="Assets\Scripts\BaseClass\PanelBase.cs" />
     <Compile Include="Assets\Scripts\GraphNode.cs" />
@@ -283,6 +284,7 @@
     <Compile Include="Assets\Scripts\Manager\AppManager.cs" />
     <Compile Include="Assets\Scripts\Manager\FbManager.cs" />
     <Compile Include="Assets\Scripts\Manager\ScreenManager.cs" />
+    <Compile Include="Assets\Scripts\RateButton.cs" />
     <Compile Include="Assets\Scripts\Screens\HomeScreen.cs" />
     <Compile Include="Assets\Scripts\Screens\LoginScreen.cs" />
     <Compile Include="Assets\Scripts\Screens\SettingScreen.cs" />

@@ -1,10 +1,15 @@
 ﻿<Properties StartupConfiguration="{EA08B961-1084-B6B0-4D26-32D4286721B4}|">
-  <MonoDevelop.Ide.ItemProperties.QuitCoach PreferredExecutionTarget="ca95fdfa-95aa-41e7-b2b4-64b6b1c20a4a" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GraphNode.cs">
+  <MonoDevelop.Ide.ItemProperties.QuitCoach PreferredExecutionTarget="441594b0-9b47-4c3d-b1cb-c0fbdf01e56d" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Screens/HomeScreen.cs">
     <Files>
-      <File FileName="Assets/Scripts/Screens/HomeScreen.cs" Line="250" Column="111" />
+      <File FileName="Assets/Scripts/Screens/HomeScreen.cs" Line="239" Column="38" />
       <File FileName="Assets/Scripts/GraphNode.cs" Line="23" Column="36" />
-      <File FileName="Assets/Scripts/Screens/SettingScreen.cs" Line="29" Column="1" />
+      <File FileName="Assets/Scripts/Screens/SettingScreen.cs" Line="1" Column="1" />
+      <File FileName="Assets/FeedBackScreen.cs" Line="41" Column="10" />
+      <File FileName="Assets/Scripts/RateButton.cs" Line="39" Column="26" />
+      <File FileName="Assets/Scripts/Manager/AppManager.cs" Line="28" Column="25" />
+      <File FileName="Assets/PredictorScreen.cs" Line="179" Column="6" />
+      <File FileName="Assets/Scripts/Screens/SplashScreen.cs" Line="31" Column="11" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,8 +18,9 @@
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="Manager" expanded="True" />
-                <Node name="Screens" expanded="True" />
-                <Node name="GraphNode.cs" selected="True" />
+                <Node name="Screens" expanded="True">
+                  <Node name="HomeScreen.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
