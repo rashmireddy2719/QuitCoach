@@ -16,7 +16,7 @@ public class PredictorScreen : PanelBase
 
     public float PredictPattern()
     {
-        float avg1, avg2, sum1 = 0, sum2 = 0, diff, avgScore, dayScore, weekScore, alcoholScore, lapseScore = 100, feedbackScore, totalScore;
+        float avg1, avg2, sum1 = 0, sum2 = 0, diff, avgScore, dayScore, weekScore, smokeScore, lapseScore = 100, feedbackScore, totalScore;
         float pSum = 0, nSum = 0;
 
         for (int i = dose.Length - 2; i > dose.Length - 9; i--)
@@ -109,7 +109,7 @@ public class PredictorScreen : PanelBase
             dayScore = 0;
         dayScore = dayScore + 100;
 
-        if (sum1 > 10 && sum1 < 14)
+        if (sum1 > 10 && sum1 < 13)
         {
             weekScore = 25;
         }
@@ -125,19 +125,19 @@ public class PredictorScreen : PanelBase
         {
             weekScore = 100;
         }
-        else if (sum1 >= 14 && sum1 <= 17)
+        else if (sum1 >= 13 && sum1 <= 16)
         {
             weekScore = -25;
         }
-        else if (sum1 > 17 && sum1 <= 21)
+        else if (sum1 > 16 && sum1 <= 18)
         {
             weekScore = -50;
         }
-        else if (sum1 > 21 && sum1 <= 25)
+        else if (sum1 > 18 && sum1 <= 20)
         {
             weekScore = -75;
         }
-        else if (sum1 > 25)
+        else if (sum1 > 20)
         {
             weekScore = -100;
         }
@@ -145,7 +145,7 @@ public class PredictorScreen : PanelBase
             weekScore = 0;
         weekScore = weekScore + 100;
 
-        alcoholScore = (float)(0.5 * avgScore + 0.15 * dayScore + 0.35 * weekScore) / 2;
+        smokeScore = (float)(0.5 * avgScore + 0.15 * dayScore + 0.35 * weekScore) / 2;
 
         if (AppManager.Instance.lastFeedback == null)
         {
@@ -174,7 +174,7 @@ public class PredictorScreen : PanelBase
 
         }
         feedbackScore = (AppManager.Instance.latestFeedbackScore + lapseScore) / 2;
-        totalScore = (float)(0.75 * alcoholScore + 0.25 * feedbackScore) / 2;
+        totalScore = (float)(0.75 * smokeScore + 0.25 * feedbackScore) / 2;
         return totalScore;
     }
 }

@@ -20,16 +20,36 @@ public class FeedBackScreen : MonoBehaviour
 
     public void AddScore(int index)
     {
-        score[index] = 1;
-        btns[index].no.sprite = normal;
-        btns[index].yes.sprite = clicked;
+        if(index == 2 || index == 3 || index == 4)
+        {
+            score[index] = 0;
+            btns[index].no.sprite = normal;
+            btns[index].yes.sprite = clicked;
+        }
+        else
+        {
+            score[index] = 1;
+            btns[index].no.sprite = normal;
+            btns[index].yes.sprite = clicked;
+        }
+        
     }
 
     public void RemoveScore(int index)
     {
-        score[index] = 0;
-        btns[index].no.sprite = clicked;
-        btns[index].yes.sprite = normal;
+        if (index == 2 || index == 3 || index == 4)
+        {
+            score[index] = 1;
+            btns[index].no.sprite = clicked;
+            btns[index].yes.sprite = normal;
+        }
+        else
+        {
+            score[index] = 0;
+            btns[index].no.sprite = clicked;
+            btns[index].yes.sprite = normal;
+        }
+            
     }
 
     public void Sumbit()
@@ -39,6 +59,21 @@ public class FeedBackScreen : MonoBehaviour
         {
             total += i;
         }
+        total = total + 1 ;
+        if (total == 7 || total == 6 )
+        {
+            ActivatePopup("Low!");
+        }
+        else if(total == 5 || total == 4)
+        {
+            ActivatePopup("Moderate!");
+        }
+        else if(total == 3 || total==2 || total == 1)
+        {
+            ActivatePopup("High!");
+        }
+       
+
     }
 
     [Serializable]
