@@ -1,27 +1,32 @@
 ﻿<Properties StartupConfiguration="{EA08B961-1084-B6B0-4D26-32D4286721B4}|">
-  <MonoDevelop.Ide.ItemProperties.QuitCoach PreferredExecutionTarget="441594b0-9b47-4c3d-b1cb-c0fbdf01e56d" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Screens/HomeScreen.cs">
+  <MonoDevelop.Ide.ItemProperties.QuitCoach PreferredExecutionTarget="c756487d-f2a2-4d33-8ee2-8179aeb200ee" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/BlogScreen.cs">
     <Files>
-      <File FileName="Assets/Scripts/Screens/HomeScreen.cs" Line="239" Column="38" />
-      <File FileName="Assets/Scripts/GraphNode.cs" Line="23" Column="36" />
-      <File FileName="Assets/Scripts/Screens/SettingScreen.cs" Line="1" Column="1" />
-      <File FileName="Assets/FeedBackScreen.cs" Line="41" Column="10" />
-      <File FileName="Assets/Scripts/RateButton.cs" Line="39" Column="26" />
-      <File FileName="Assets/Scripts/Manager/AppManager.cs" Line="28" Column="25" />
-      <File FileName="Assets/PredictorScreen.cs" Line="179" Column="6" />
-      <File FileName="Assets/Scripts/Screens/SplashScreen.cs" Line="31" Column="11" />
+      <File FileName="Assets/Scripts/Screens/HomeScreen.cs" Line="126" Column="5" />
+      <File FileName="Assets/Scripts/GraphNode.cs" />
+      <File FileName="Assets/Scripts/Screens/SettingScreen.cs" />
+      <File FileName="Assets/FeedBackScreen.cs" />
+      <File FileName="Assets/Scripts/RateButton.cs" />
+      <File FileName="Assets/Scripts/Manager/AppManager.cs" Line="16" Column="24" />
+      <File FileName="Assets/PredictorScreen.cs" />
+      <File FileName="Assets/Scripts/Screens/SplashScreen.cs" />
+      <File FileName="Assets/Chat_Module/Scripts/Chatmanager.cs" Line="354" Column="1" />
+      <File FileName="Assets/BlogScreen.cs" Line="67" Column="28" />
+      <File FileName="Assets/Post_obj.cs" Line="18" Column="32" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="QuitCoach" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="Chat_Module" expanded="True">
+                <Node name="Scripts" expanded="True" />
+              </Node>
               <Node name="Scripts" expanded="True">
                 <Node name="Manager" expanded="True" />
-                <Node name="Screens" expanded="True">
-                  <Node name="HomeScreen.cs" selected="True" />
-                </Node>
+                <Node name="Screens" expanded="True" />
               </Node>
+              <Node name="BlogScreen.cs" selected="True" />
             </Node>
           </Node>
         </State>

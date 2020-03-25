@@ -12,6 +12,8 @@ public class AppManager : MonoBehaviour
 
     public string phoneNumber;
     public string Name;
+    public string city;
+    public string story;
     public string email;
     public string password;
     [SerializeField]

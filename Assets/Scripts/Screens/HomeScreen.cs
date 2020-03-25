@@ -123,6 +123,11 @@ public class HomeScreen : PanelBase
         ScreenManager.Instance.Activate<SettingScreen>();
     }
 
+    public void GoToCommunity()
+    {
+        ScreenManager.Instance.Activate<BlogScreen>();
+    }
+
     public void AddDoseBeer()
     {
         if (inputFieldBeer.text == "")
@@ -313,7 +318,7 @@ public class HomeScreen : PanelBase
             sum += userdose[i];
         }
 
-        if(sum == 0)
+        if (sum == 0)
         {
             SendAverageNotification();
             return;
