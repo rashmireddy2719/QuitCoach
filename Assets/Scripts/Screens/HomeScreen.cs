@@ -313,6 +313,12 @@ public class HomeScreen : PanelBase
             sum += userdose[i];
         }
 
+        if(sum == 0)
+        {
+            SendAverageNotification();
+            return;
+        }
+
         avg = sum / 20;
 
         if (avg == 0)
