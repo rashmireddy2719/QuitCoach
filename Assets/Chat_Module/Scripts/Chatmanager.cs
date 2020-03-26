@@ -13,7 +13,7 @@ public class Chatmanager : MonoBehaviour
     private GroupChannelListQuery mGroupChannelListQuery;
 
     public BlogScreen blogScreen;
-    public ChatScreen chatScreen;
+    public CommunityScreen chatScreen;
     public FriendsListScreen friendsScreen;
 
     public OpenChannel blogChannel;
@@ -52,7 +52,7 @@ public class Chatmanager : MonoBehaviour
             {
                 if (message is UserMessage)
                 {
-                    //chatScreen.AddChatMessage(message);
+                    chatScreen.AddBlog(message);
                     Debug.Log("Chat " + "   Message  :" + ((UserMessage)message).Message +
                         "   Sender  :" + ((UserMessage)message).Sender.Nickname);
                 }
@@ -380,7 +380,7 @@ public class Chatmanager : MonoBehaviour
                     Debug.Log(e.Code + ": " + e.Message);
                     return;
                 }
-
+                chatScreen.AddBlog(message);
                 //blogScreen.AddBlogPost(message);
 
             });

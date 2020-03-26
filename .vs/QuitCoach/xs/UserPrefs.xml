@@ -1,18 +1,20 @@
 ﻿<Properties StartupConfiguration="{EA08B961-1084-B6B0-4D26-32D4286721B4}|">
-  <MonoDevelop.Ide.ItemProperties.QuitCoach PreferredExecutionTarget="c756487d-f2a2-4d33-8ee2-8179aeb200ee" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/BlogScreen.cs">
+  <MonoDevelop.Ide.ItemProperties.QuitCoach PreferredExecutionTarget="42de470b-fce0-43e7-b4c7-41d2d96ad5aa" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Screens/HomeScreen.cs">
     <Files>
-      <File FileName="Assets/Scripts/Screens/HomeScreen.cs" Line="126" Column="5" />
+      <File FileName="Assets/Scripts/Screens/HomeScreen.cs" Line="115" Column="10" />
       <File FileName="Assets/Scripts/GraphNode.cs" />
       <File FileName="Assets/Scripts/Screens/SettingScreen.cs" />
-      <File FileName="Assets/FeedBackScreen.cs" />
+      <File FileName="Assets/FeedBackScreen.cs" Line="23" Column="55" />
       <File FileName="Assets/Scripts/RateButton.cs" />
-      <File FileName="Assets/Scripts/Manager/AppManager.cs" Line="16" Column="24" />
+      <File FileName="Assets/Scripts/Manager/AppManager.cs" />
       <File FileName="Assets/PredictorScreen.cs" />
       <File FileName="Assets/Scripts/Screens/SplashScreen.cs" />
-      <File FileName="Assets/Chat_Module/Scripts/Chatmanager.cs" Line="354" Column="1" />
-      <File FileName="Assets/BlogScreen.cs" Line="67" Column="28" />
-      <File FileName="Assets/Post_obj.cs" Line="18" Column="32" />
+      <File FileName="Assets/Chat_Module/Scripts/Chatmanager.cs" Line="55" Column="49" />
+      <File FileName="Assets/BlogScreen.cs" Line="69" Column="6" />
+      <File FileName="Assets/Post_obj.cs" Line="19" Column="6" />
+      <File FileName="Assets/CommunityScreen.cs" Line="35" Column="19" />
+      <File FileName="Assets/Chat_obj.cs" Line="15" Column="31" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,9 +26,10 @@
               </Node>
               <Node name="Scripts" expanded="True">
                 <Node name="Manager" expanded="True" />
-                <Node name="Screens" expanded="True" />
+                <Node name="Screens" expanded="True">
+                  <Node name="HomeScreen.cs" selected="True" />
+                </Node>
               </Node>
-              <Node name="BlogScreen.cs" selected="True" />
             </Node>
           </Node>
         </State>

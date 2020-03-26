@@ -251,6 +251,12 @@
     <Reference Include="FacebookNamedPipeClient">
       <HintPath>Assets/FacebookSDK/Plugins/Gameroom/FacebookNamedPipeClient.dll</HintPath>
     </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Assets/Chat_Module/SDK/websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SendBird.Unity">
+      <HintPath>Assets/Chat_Module/SDK/SendBird.Unity.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>/Users/vinay/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
     </Reference>
@@ -259,12 +265,6 @@
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>/Users/vinay/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="SendBird.Unity">
-      <HintPath>Assets/Chat_Module/SDK/SendBird.Unity.dll</HintPath>
-    </Reference>
-    <Reference Include="websocket-sharp">
-      <HintPath>Assets/Chat_Module/SDK/websocket-sharp.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -276,6 +276,8 @@
     <Compile Include="Assets\Chat_Module\Scripts\PeopleNearBy.cs" />
     <Compile Include="Assets\Chat_Module\Scripts\Screenmanager.cs" />
     <Compile Include="Assets\Chat_Module\Scripts\UserObjecct.cs" />
+    <Compile Include="Assets\Chat_obj.cs" />
+    <Compile Include="Assets\CommunityScreen.cs" />
     <Compile Include="Assets\FacebookSDK\Examples\Scripts\ConsoleBase.cs" />
     <Compile Include="Assets\FacebookSDK\Examples\Scripts\LogView.cs" />
     <Compile Include="Assets\FacebookSDK\Examples\Scripts\MenuBase.cs" />

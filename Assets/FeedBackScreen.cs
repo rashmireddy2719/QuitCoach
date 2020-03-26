@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-public class FeedBackScreen : MonoBehaviour
+public class FeedBackScreen : PanelBase
 {
 
     public List<int> score;
@@ -18,9 +18,14 @@ public class FeedBackScreen : MonoBehaviour
     public GameObject popup;
     public Text popupText;
 
+    public void GoToHome()
+    {
+        ScreenManager.Instance.Activate<HomeScreen>();
+    }
+
     public void AddScore(int index)
     {
-        if(index == 2 || index == 3 || index == 4)
+        if (index == 2 || index == 3 || index == 4)
         {
             score[index] = 0;
             btns[index].no.sprite = normal;
@@ -32,7 +37,7 @@ public class FeedBackScreen : MonoBehaviour
             btns[index].no.sprite = normal;
             btns[index].yes.sprite = clicked;
         }
-        
+
     }
 
     public void RemoveScore(int index)
@@ -49,7 +54,7 @@ public class FeedBackScreen : MonoBehaviour
             btns[index].no.sprite = clicked;
             btns[index].yes.sprite = normal;
         }
-            
+
     }
 
     public void Sumbit()
@@ -59,20 +64,20 @@ public class FeedBackScreen : MonoBehaviour
         {
             total += i;
         }
-        total = total + 1 ;
-        if (total == 7 || total == 6 )
+        total = total + 1;
+        if (total == 7 || total == 6)
         {
             ActivatePopup("Low!");
         }
-        else if(total == 5 || total == 4)
+        else if (total == 5 || total == 4)
         {
             ActivatePopup("Moderate!");
         }
-        else if(total == 3 || total==2 || total == 1)
+        else if (total == 3 || total == 2 || total == 1)
         {
             ActivatePopup("High!");
         }
-       
+
 
     }
 

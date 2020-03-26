@@ -72,4 +72,9 @@ public class BlogScreen : PanelBase
     {
         ScreenManager.Instance.Activate<HomeScreen>();
     }
+
+    public void GoToChat()
+    {
+        ScreenManager.Instance.Activate<CommunityScreen>();
+    }
 }

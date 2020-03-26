@@ -123,6 +123,11 @@ public class HomeScreen : PanelBase
         ScreenManager.Instance.Activate<SettingScreen>();
     }
 
+    public void GoToFeedBack()
+    {
+        ScreenManager.Instance.Activate<FeedBackScreen>();
+    }
+
     public void GoToCommunity()
     {
         ScreenManager.Instance.Activate<BlogScreen>();
