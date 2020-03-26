@@ -64,7 +64,7 @@ public class CommunityScreen : PanelBase
 
     public void AddBlog(BaseMessage msg)
     {
-        Chatmanager.Instance.blogHistrory.Insert(0, msg);
+        Chatmanager.Instance.chatHistrory.Insert(0, msg);
         GameObject temp = Instantiate(blogObject.gameObject);
         temp.transform.SetParent(blogObjectParent.transform);
         temp.transform.SetSiblingIndex(0);
