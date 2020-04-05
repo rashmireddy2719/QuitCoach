@@ -67,15 +67,15 @@ public class FeedBackScreen : PanelBase
         total = total + 1;
         if (total == 7 || total == 6)
         {
-            ActivatePopup("Low!");
+            ActivatePopup("Low!Keep going!  you are on the right track");
         }
         else if (total == 5 || total == 4)
         {
-            ActivatePopup("Moderate!");
+            ActivatePopup("Moderate!More attention is required to avoid your cravings");
         }
         else if (total == 3 || total == 2 || total == 1)
         {
-            ActivatePopup("High!");
+            ActivatePopup("High!Connect with addiction experts or community to avoid your craving");
         }
 
 
